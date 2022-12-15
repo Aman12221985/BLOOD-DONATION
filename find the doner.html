@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find the Doner</title>
+  <link rel="stylesheet" href="find doner.css">
+</head>
+<style>
+body{
+background-image:url("img19.jpg")
+}
+
+</style>
+<body>
+  
+  <div class="container">
+    <form name="cardForm" action="">
+      <!-- creating a form using "form" tag-->
+      <hr />
+      <h1 class="main_heading">Find the Doner</h1>
+      <p><span>*</span> <b>marked places are must to be filled</b></p>
+      <hr />
+      <h2>PERSONAL INFORMATION</h2>
+      <p> NAME<span>*</span> :<input type="text" id="round" name="name" required
+                        oninvalid="this.setCustomValidity('Enter your awesome full name here please')"
+                        oninput="this.setCustomValidity('')"/></p>
+      <!-- "required" this tag means that we have to fill that place mandatory-->
+      <fieldset>
+        <legend>CHOOSE GENDER<span>*</span></legend>
+        <p>
+          <input type="radio" name="Gender" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="Gender" id="female" />
+          <label for="female">Female</label>
+          <input type="radio" name="Gender" id="others" />
+          <label for="others">Others</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>CHOOSE BLOOD GROUP<span>*</span></legend>
+        <p>
+          <input type="radio" name="Group" id="A+" />
+          <label for="A+">A+</label>
+          <input type="radio" name="Group" id="A-" />
+          <label for="A-">A-</label>
+          <input type="radio" name="Group" id="B+" />
+          <label for="B+">B+</label>
+          <input type="radio" name="Group" id="B-" />
+          <label for="B-">B-</label>
+          <input type="radio" name="Group" id="AB+" />
+          <label for="AB+">AB+</label>
+          <input type="radio" name="Group" id="AB-" />
+          <label for="AB-">AB-</label>
+          <input type="radio" name="Group" id="O+" />
+          <label for="O+">O+</label>
+          <input type="radio" name="Group" id="O-" />
+          <label for="O-">O-</label>
+          
+        </p></fieldset>
+      </fieldset>
+
+      <p> ADDRESS<span>*</span> :
+        <textarea name="Address" id="Address" cols="100" rows="8" required></textarea>
+        <!-- adding a blank text area for writing address-->
+      </p>
+      <p> Email<span>*</span> : <input type="email" name="email" id="email" required
+                         oninvalid="this.setCustomValidity('Enter correct email address please')"
+                         oninput="this.setCustomValidity('')"/></p>
+      <p> PINCODE<span>*</span> <input type="number" name="pincode" id="pincode" pattern="[0-9]{4,}"/></p>
+      <hr />
+      <h2><b>Donar Information</b></h2>
+      <p>
+         Id Type<span>*</span>:-
+        <select name="Id_type" id="Id_type" required>
+          <option value="">--Select A Id Type--</option>
+          <option value="Aadhar Card">Aadhar Card</option>
+          <option value="Pan Card">Pan Card</option>
+          <option value="Other">Other</option>
+          
+        </select>
+      </p>
+      <p>
+        Id Number<span>*</span>:-
+        <input type="number" name="Id_number" id="Id_number" required pattern="[0-9]{13,16}"
+               oninvalid="this.setCustomValidity('Add correct Id data here with correct length')"
+               oninput="this.setCustomValidity('')"/>
+      </p>
+      <p>
+         Date<span>*</span>:-
+        <input type="date" name="date" id="date" required />
+      </p>
+     
+        
+      
+      <input class="btn" type="submit" value="SUBMIT DETAILS " />
+    </form>
+  </div>
+</body>
+
+</html>
